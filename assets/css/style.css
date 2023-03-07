@@ -8,6 +8,7 @@
   --color-white: #fff;
   --gradient-primary: linear-gradient(to bottom, #4851ff, #f02aa6);
   --gradient-secondary: linear-gradient(to bottom, #ff6f48, #f02aa6);
+  --gradient-light: linear-gradient(to bottom, #fff, #f0f1ff);
 
   --font-body: 'Plus Jakarta Sans', sans-serif;
 }
@@ -27,7 +28,7 @@ html {
 body {
   color: var(--color-grey);
   font-family: var(--font-body);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 500;
   line-height: 2.8rem;
 }
@@ -68,9 +69,13 @@ button {
 }
 
 .h2 {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
 }
 
 .h3 {
+  font-size: 2rem;
+  line-height: 2.8rem;
 }
 
 .h4 {
@@ -127,6 +132,18 @@ button {
 .footer-nav-brand:link,
 .footer-nav-brand:visited {
   color: var(--color-white);
+}
+
+/* Courses */
+.section-courses {
+  background-image: var(--gradient-light);
+  padding-bottom: 8rem;
+}
+
+.courses-grid {
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
 }
 
 /********************************************/
@@ -208,6 +225,58 @@ button {
   opacity: 0.5;
 }
 
+.btn-inline,
+.btn-inline:link,
+.btn-inline:visited {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 1;
+  color: var(--color-secondary);
+  transition: all 0.3s ease;
+}
+
+.btn-inline:hover,
+.btn-inline:active {
+  color: var(--color-grey-light);
+}
+
+/* Quote */
+.quote {
+  color: var(--color-white);
+  background-image: var(--gradient-secondary);
+  padding: 2.8rem;
+  border-radius: 1rem;
+}
+
+/* Course Card */
+.course-card {
+  padding: 3.2rem 2.8rem;
+  padding-top: 0;
+  background-color: var(--color-white);
+  border-radius: 1rem;
+  box-shadow: 0 2.5rem 5rem rgba(6, 22, 141, 0.04);
+}
+
+.course-card-icon {
+  width: 5.6rem;
+  height: 5.6rem;
+  background-image: var(--gradient-secondary);
+  border-radius: 50%;
+  transform: translateY(-2.2rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.course-card-content {
+  display: grid;
+  gap: 1.6rem;
+  justify-items: start;
+}
+
 /********************************************/
 /* UTILS */
 /********************************************/
@@ -244,14 +313,35 @@ button {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+  .courses-grid {
+    grid-row-gap: 5rem;
+    grid-column-gap: 3rem;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .section-courses {
+    padding: 2.4rem 0;
+    padding-bottom: 8rem;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  body {
+    font-size: 1.8rem;
+  }
+
+  .h2 {
+    font-size: 3.2rem;
+    line-height: 4rem;
+  }
+
+  .h3 {
+    font-size: 2.4rem;
+  }
+
   .nav-brand:link,
   .nav-brand:visited {
     font-size: 3.6rem;
@@ -262,6 +352,19 @@ button {
   .btn:visited {
     font-size: 1.8rem;
     padding: 1.9rem 3.2rem;
+  }
+
+  .section-courses {
+    padding-bottom: 14rem;
+  }
+
+  .courses-grid {
+    grid-row-gap: 8rem;
+  }
+
+  .course-card {
+    padding: 4rem 3.2rem;
+    padding-top: 0;
   }
 }
 
