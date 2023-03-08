@@ -66,6 +66,8 @@ button {
 }
 
 .h1 {
+  font-size: 4rem;
+  line-height: 5rem;
 }
 
 .h2 {
@@ -132,6 +134,26 @@ button {
 .footer-nav-brand:link,
 .footer-nav-brand:visited {
   color: var(--color-white);
+}
+
+/* Hero */
+.section-hero {
+  padding-top: 2rem;
+  padding-bottom: 6.6rem;
+}
+
+.hero-content-grid {
+  display: grid;
+  gap: 4.8rem;
+}
+
+.hero-text {
+  display: grid;
+  grid-gap: 2.4rem;
+  justify-items: start;
+}
+
+.hero-media {
 }
 
 /* Courses */
@@ -331,6 +353,11 @@ button {
 @media (min-width: 992px) {
   body {
     font-size: 1.8rem;
+  }
+
+  .h1 {
+    font-size: 5.6rem;
+    line-height: 7rem;
   }
 
   .h2 {
